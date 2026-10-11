@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meridian — Construction · Architecture · Engineering · Development</title>
+  <meta name="description" content="Meridian is a global construction and architectural development firm. We build what lasts — landmarks engineered with precision and crafted to endure." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://images.unsplash.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Space+Grotesk:wght@300;400;500&family=Inter:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Inline icon sprite -->
+  <svg style="display:none" aria-hidden="true">
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-contract" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17"/><path d="M3.5 9.5h17M9.5 20.5V9.5"/></symbol>
+    <symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M15.2 8.8l-2.1 5-4.3 1.4 2.1-5z"/></symbol>
+    <symbol id="i-precision" viewBox="0 0 24 24"><rect x="4.5" y="3.5" width="15" height="17"/><path d="M8.5 7.5h7M8.5 12h3.5M8.5 16h3.5M15 12v5.5"/></symbol>
+    <symbol id="i-city" viewBox="0 0 24 24"><path d="M3 20.5h18M5 20.5V7.5h6v13M11 20.5v-17h8v17M8 11h.01M8 14.5h.01M15 8h.01M15 12h.01M15 16h.01"/></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11.5L12 3l9 8.5M5.5 9.5V20.5h13V9.5M9.5 20.5v-6h5v6"/></symbol>
+    <symbol id="i-restore" viewBox="0 0 24 24"><path d="M14.7 6.3a4.2 4.2 0 0 0-5.6 5.6L3 18v3h3l6.1-6.1a4.2 4.2 0 0 0 5.6-5.6L15 12l-3-3z"/></symbol>
+  </svg>
+
+  <!-- ===================== LOADER ===================== -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__wordmark">MERIDIAN</div>
+    <div class="loader__bar"><span id="loaderBar"></span></div>
+  </div>
+
+  <!-- ===================== CURSOR ===================== -->
+  <div class="cursor" id="cursor"><span class="cursor__label">VIEW</span></div>
+
+  <!-- ===================== NAV ===================== -->
+  <header class="nav" id="nav">
+    <a class="nav__logo" href="#top" aria-label="Meridian home">MERIDIAN<span></span></a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#projects">Projects</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#process">Process</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="nav__cta" href="#contact">Start a Project</a>
+    <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <div class="menu" id="menu" aria-hidden="true">
+    <nav class="menu__links">
+      <a href="#projects"><em>01</em>Projects</a>
+      <a href="#services"><em>02</em>Services</a>
+      <a href="#about"><em>03</em>About</a>
+      <a href="#process"><em>04</em>Process</a>
+      <a href="#contact"><em>05</em>Contact</a>
+    </nav>
+    <div class="menu__foot">
+      <span>hello@meridiangroup.com</span>
+      <span>+1 (212) 555-0148</span>
+    </div>
+  </div>
+
+  <main id="top">
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="hero">
+      <figure class="hero__media">
+        <video class="hero__video" id="heroVideo" autoplay muted loop playsinline preload="auto" poster="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=2400&q=80">
+          <source src="https://videos.pexels.com/video-files/3689303/3689303-hd_1920_1080_30fps.mp4" type="video/mp4" />
+          <source src="https://videos.pexels.com/video-files/9425990/9425990-hd_1920_1080_30fps.mp4" type="video/mp4" />
+          <source src="https://videos.pexels.com/video-files/8598741/8598741-hd_1920_1080_30fps.mp4" type="video/mp4" />
+        </video>
+      </figure>
+      <div class="hero__timelapse" id="heroTimelapse" aria-hidden="true">
+        <img class="is-active" src="https://images.unsplash.com/photo-1547555999-14e818e09e33?auto=format&fit=crop&w=2400&q=80" alt="" />
+        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=2400&q=80" alt="" />
+        <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=2400&q=80" alt="" />
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2400&q=80" alt="" />
+        <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=2400&q=80" alt="" />
+      </div>
+      <div class="hero__shade"></div>
+      <div class="hero__grain"></div>
+
+      <div class="hero__content">
+        <p class="hero__eyebrow"><span class="hero__eyebrow-line"></span>Meridian Development Group — Est. 1999</p>
+        <h1 class="hero__title">
+          <span class="line"><span class="line__inner">We build</span></span>
+          <span class="line"><span class="line__inner">what <i>lasts.</i></span></span>
+        </h1>
+        <p class="hero__sub">Construction&ensp;·&ensp;Architecture&ensp;·&ensp;Engineering&ensp;·&ensp;Development</p>
+        <div class="hero__cta">
+          <a class="btn btn--solid" href="#projects" data-magnetic><span>Explore our work</span><svg class="icon"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn--ghost" href="#contact" data-magnetic><span>Start a project</span></a>
+        </div>
+      </div>
+
+      <a class="hero__scroll" href="#projects" aria-label="Scroll to projects">
+        <span class="hero__scroll-label">Scroll</span>
+        <span class="hero__scroll-line"></span>
+      </a>
+    </section>
+
+    <!-- ===================== FEATURED PROJECTS ===================== -->
+    <section class="projects section" id="projects">
+      <div class="section__head container">
+        <p class="eyebrow reveal">Selected Work <span>2019 — 2026</span></p>
+        <h2 class="display reveal-lines">
+          <span class="line"><span class="line__inner">Built for</span></span>
+          <span class="line"><span class="line__inner">the <i>future.</i></span></span>
+        </h2>
+        <p class="section__note reveal">Five landmarks from a global portfolio of one hundred and fifty.</p>
+      </div>
+
+      <div class="projects__list">
+
+        <article class="project" data-cursor="view">
+          <figure class="project__media mask-img reveal-media">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2400&q=85" alt="Meridian One supertall tower" loading="lazy" />
+          </figure>
+          <div class="project__info container">
+            <span class="project__num">01</span>
+            <div class="project__main">
+              <h3>Meridian One</h3>
+              <p class="project__desc">A 74-storey supertall redefining the waterfront skyline — 112,000 m² of engineered glass and stone.</p>
+            </div>
+            <dl class="project__meta">
+              <div><dt>Location</dt><dd>Dubai, UAE</dd></div>
+              <div><dt>Type</dt><dd>Supertall</dd></div>
+              <div><dt>Year</dt><dd>2024</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="project" data-cursor="view">
+          <figure class="project__media mask-img reveal-media">
+            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=2400&q=85" alt="Azure Bay Residences" loading="lazy" />
+          </figure>
+          <div class="project__info container">
+            <span class="project__num">02</span>
+            <div class="project__main">
+              <h3>Azure Bay Residences</h3>
+              <p class="project__desc">Forty-two cliffside residences with cantilevered terraces, finished in travertine and bronze.</p>
+            </div>
+            <dl class="project__meta">
+              <div><dt>Location</dt><dd>Santa Monica, USA</dd></div>
+              <div><dt>Type</dt><dd>Luxury Residential</dd></div>
+              <div><dt>Year</dt><dd>2023</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="project" data-cursor="view">
+          <figure class="project__media mask-img reveal-media">
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2400&q=85" alt="The Aria Center interior" loading="lazy" />
+          </figure>
+          <div class="project__info container">
+            <span class="project__num">03</span>
+            <div class="project__main">
+              <h3>The Aria Center</h3>
+              <p class="project__desc">A mixed-use cultural block where a public lobby, offices and a concert hall share one sculpted atrium.</p>
+            </div>
+            <dl class="project__meta">
+              <div><dt>Location</dt><dd>Copenhagen, DK</dd></div>
+              <div><dt>Type</dt><dd>Mixed-Use</dd></div>
+              <div><dt>Year</dt><dd>2023</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="project" data-cursor="view">
+          <figure class="project__media mask-img reveal-media">
+            <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=2400&q=85" alt="Aurum Tower facade" loading="lazy" />
+          </figure>
+          <div class="project__info container">
+            <span class="project__num">04</span>
+            <div class="project__main">
+              <h3>Aurum Tower</h3>
+              <p class="project__desc">A 38-storey commercial tower with a breathing double-skin facade — Singapore's first carbon-negative high-rise.</p>
+            </div>
+            <dl class="project__meta">
+              <div><dt>Location</dt><dd>Singapore, SG</dd></div>
+              <div><dt>Type</dt><dd>Commercial</dd></div>
+              <div><dt>Year</dt><dd>2022</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="project" data-cursor="view">
+          <figure class="project__media mask-img reveal-media">
+            <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=2400&q=85" alt="Casa Terra villa" loading="lazy" />
+          </figure>
+          <div class="project__info container">
+            <span class="project__num">05</span>
+            <div class="project__main">
+              <h3>Casa Terra</h3>
+              <p class="project__desc">A private villa carved into the hillside — rammed-earth walls, infinity water and total silence.</p>
+            </div>
+            <dl class="project__meta">
+              <div><dt>Location</dt><dd>Marbella, ES</dd></div>
+              <div><dt>Type</dt><dd>Private Villa</dd></div>
+              <div><dt>Year</dt><dd>2022</dd></div>
+            </dl>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ===================== COMPANY INTRO ===================== -->
+    <section class="intro section" id="about">
+      <div class="container">
+        <div class="intro__grid">
+          <div class="intro__media">
+            <figure class="intro__img parallax-img reveal-media">
+              <img src="https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?auto=format&fit=crop&w=2000&q=85" alt="Looking up at modern city towers" loading="lazy" />
+            </figure>
+            <figure class="intro__img-sm parallax-img-sm reveal-media">
+              <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1200&q=80" alt="Engineer reviewing structural plans on site" loading="lazy" />
+            </figure>
+          </div>
+          <div class="intro__body">
+            <p class="eyebrow reveal">The Company</p>
+            <h2 class="display display--md reveal-lines">
+              <span class="line"><span class="line__inner">We don't just</span></span>
+              <span class="line"><span class="line__inner">construct buildings.</span></span>
+              <span class="line"><span class="line__inner">We create <i>landmarks.</i></span></span>
+            </h2>
+            <p class="lead reveal">For over two decades, Meridian has united architecture, structural engineering, craftsmanship and technology under one roof — taking landmark projects from first sketch to final detail with the discipline of a builder and the eye of a designer.</p>
+            <div class="stats reveal">
+              <div class="stat"><span class="stat__num" data-count="25" data-suffix="+">0</span><span class="stat__label">Years</span></div>
+              <div class="stat"><span class="stat__num" data-count="150" data-suffix="+">0</span><span class="stat__label">Projects</span></div>
+              <div class="stat"><span class="stat__num" data-count="12" data-suffix="M+">0</span><span class="stat__label">Sq Ft Built</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SERVICES ===================== -->
+    <section class="services section" id="services">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow reveal">Capabilities</p>
+          <h2 class="display display--md reveal-lines">
+            <span class="line"><span class="line__inner">Everything a landmark</span></span>
+            <span class="line"><span class="line__inner">requires. <i>Under one roof.</i></span></span>
+          </h2>
+        </div>
+        <div class="services__grid">
+          <article class="service reveal" style="--d:.00s">
+            <svg class="icon"><use href="#i-contract"/></svg>
+            <span class="service__num">01</span>
+            <h3>General Contracting</h3>
+            <p>End-to-end construction management and execution.</p>
+          </article>
+          <article class="service reveal" style="--d:.06s">
+            <svg class="icon"><use href="#i-compass"/></svg>
+            <span class="service__num">02</span>
+            <h3>Architecture &amp; Design</h3>
+            <p>Contemporary architectural concepts and design development.</p>
+          </article>
+          <article class="service reveal" style="--d:.12s">
+            <svg class="icon"><use href="#i-precision"/></svg>
+            <span class="service__num">03</span>
+            <h3>Structural Engineering</h3>
+            <p>Precision engineering for complex structures.</p>
+          </article>
+          <article class="service reveal" style="--d:.18s">
+            <svg class="icon"><use href="#i-city"/></svg>
+            <span class="service__num">04</span>
+            <h3>Commercial Development</h3>
+            <p>Large-scale commercial and mixed-use developments.</p>
+          </article>
+          <article class="service reveal" style="--d:.24s">
+            <svg class="icon"><use href="#i-home"/></svg>
+            <span class="service__num">05</span>
+            <h3>Luxury Residential</h3>
+            <p>High-end homes designed and constructed to exacting standards.</p>
+          </article>
+          <article class="service reveal" style="--d:.30s">
+            <svg class="icon"><use href="#i-restore"/></svg>
+            <span class="service__num">06</span>
+            <h3>Renovation &amp; Restoration</h3>
+            <p>Transforming existing structures with modern craftsmanship.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CINEMATIC ===================== -->
+    <section class="cine" id="craft">
+      <div class="cine__sticky">
+        <figure class="cine__bg parallax-cine">
+          <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=2400&q=85" alt="Slow cinematic view of a construction site with crane" loading="lazy" />
+        </figure>
+        <div class="cine__shade"></div>
+        <div class="cine__content">
+          <p class="eyebrow eyebrow--light reveal">On Site</p>
+          <h2 class="display reveal-lines">
+            <span class="line"><span class="line__inner">Precision in</span></span>
+            <span class="line"><span class="line__inner">every <i>detail.</i></span></span>
+          </h2>
+          <p class="cine__meta reveal">Concrete&ensp;·&ensp;Welding&ensp;·&ensp;Cranes&ensp;·&ensp;Drawings&ensp;·&ensp;Glass</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PROCESS ===================== -->
+    <section class="process section" id="process">
+      <div class="container">
+        <div class="process__grid">
+          <div class="process__side">
+            <div class="process__sticky">
+              <p class="eyebrow reveal">The Process</p>
+              <h2 class="display display--md reveal-lines">
+                <span class="line"><span class="line__inner">From first sketch</span></span>
+                <span class="line"><span class="line__inner">to <i>final handover.</i></span></span>
+              </h2>
+              <p class="lead reveal">Four disciplines. One accountable team. Nothing left to chance.</p>
+            </div>
+          </div>
+          <ol class="process__steps">
+            <li class="step reveal">
+              <span class="step__num">01</span>
+              <div class="step__body">
+                <h3>Discover</h3>
+                <p>Understanding the vision, site, requirements and goals.</p>
+              </div>
+            </li>
+            <li class="step reveal">
+              <span class="step__num">02</span>
+              <div class="step__body">
+                <h3>Design</h3>
+                <p>Developing the architecture, engineering and project strategy.</p>
+              </div>
+            </li>
+            <li class="step reveal">
+              <span class="step__num">03</span>
+              <div class="step__body">
+                <h3>Build</h3>
+                <p>Executing construction with precision, safety and craftsmanship.</p>
+              </div>
+            </li>
+            <li class="step reveal">
+              <span class="step__num">04</span>
+              <div class="step__body">
+                <h3>Deliver</h3>
+                <p>Completing every detail and handing over a finished space built to last.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== WHY US ===================== -->
+    <section class="why section">
+      <div class="container">
+        <h2 class="display display--center reveal-lines">
+          <span class="line"><span class="line__inner">Engineered with precision.</span></span>
+          <span class="line"><span class="line__inner">Built with <i>purpose.</i></span></span>
+        </h2>
+        <div class="why__grid">
+          <article class="principle reveal" style="--d:.00s">
+            <span class="principle__num">I</span>
+            <h3>Craftsmanship</h3>
+            <p>Exceptional attention to material and detail.</p>
+          </article>
+          <article class="principle reveal" style="--d:.08s">
+            <span class="principle__num">II</span>
+            <h3>Precision</h3>
+            <p>Engineering-led construction and disciplined execution.</p>
+          </article>
+          <article class="principle reveal" style="--d:.16s">
+            <span class="principle__num">III</span>
+            <h3>Integrity</h3>
+            <p>Clear communication, transparency and accountability.</p>
+          </article>
+          <article class="principle reveal" style="--d:.24s">
+            <span class="principle__num">IV</span>
+            <h3>Vision</h3>
+            <p>Building spaces designed for the future.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SHOWCASE (horizontal) ===================== -->
+    <section class="showcase" id="showcase">
+      <div class="showcase__sticky">
+        <div class="showcase__head">
+          <p class="eyebrow">The Gallery</p>
+          <h2 class="display display--sm">Light, material, <i>silence.</i></h2>
+        </div>
+        <div class="showcase__track" id="showcaseTrack">
+          <figure class="showcase__item">
+            <img src="https://images.unsplash.com/photo-1444723121867-7a241cacace9?auto=format&fit=crop&w=2000&q=85" alt="Sunset city skyline" loading="lazy" />
+            <figcaption>Vantage — Chicago, USA</figcaption>
+          </figure>
+          <figure class="showcase__item">
+            <img src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=2000&q=85" alt="White concrete architecture" loading="lazy" />
+            <figcaption>Atelier 4 — Zurich, CH</figcaption>
+          </figure>
+          <figure class="showcase__item">
+            <img src="https://images.unsplash.com/photo-1439337153520-7082a56a81f4?auto=format&fit=crop&w=2000&q=85" alt="Glass canopy from below" loading="lazy" />
+            <figcaption>Spectra Hall — Toronto, CA</figcaption>
+          </figure>
+          <figure class="showcase__item">
+            <img src="https://images.unsplash.com/photo-1486718448742-163732cd1544?auto=format&fit=crop&w=2000&q=85" alt="Curved glass facade" loading="lazy" />
+            <figcaption>Stratum — Frankfurt, DE</figcaption>
+          </figure>
+          <figure class="showcase__item">
+            <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=2000&q=85" alt="Luxury modern interior" loading="lazy" />
+            <figcaption>Residence Nº9 — Como, IT</figcaption>
+          </figure>
+          <figure class="showcase__item">
+            <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=2000&q=85" alt="City towers at dusk" loading="lazy" />
+            <figcaption>Northbridge — Vancouver, CA</figcaption>
+          </figure>
+          <figure class="showcase__item">
+            <img src="https://images.unsplash.com/photo-1517646287270-a5a9ca602e5c?auto=format&fit=crop&w=2000&q=85" alt="Tower against an orange sunset" loading="lazy" />
+            <figcaption>Helios — Los Angeles, USA</figcaption>
+          </figure>
+        </div>
+        <div class="showcase__progress"><span id="showcaseProgress"></span></div>
+      </div>
+    </section>
+
+    <!-- ===================== TESTIMONIALS ===================== -->
+    <section class="quotes section">
+      <div class="container quotes__inner">
+        <p class="eyebrow eyebrow--center reveal">Client Words</p>
+        <div class="quotes__stage reveal">
+          <blockquote class="quote is-active">
+            <p>“From the first drawing to the final detail, their execution was exceptional.”</p>
+            <footer><strong>Daniel Reeves</strong><span>CEO — Northwind Capital</span></footer>
+          </blockquote>
+          <blockquote class="quote">
+            <p>“They delivered a twelve-storey structure ahead of schedule without a single compromise.”</p>
+            <footer><strong>Amira Haddad</strong><span>Development Director — Gulf Crest Properties</span></footer>
+          </blockquote>
+          <blockquote class="quote">
+            <p>“The rare firm that treats budget and beauty with the same discipline.”</p>
+            <footer><strong>Jonathan Meyer</strong><span>Principal — Meyer &amp; Klein Architects</span></footer>
+          </blockquote>
+        </div>
+        <div class="quotes__nav reveal">
+          <button id="quotePrev" aria-label="Previous quote"><svg class="icon icon--flip"><use href="#i-arrow"/></svg></button>
+          <span class="quotes__count"><span id="quoteIdx">01</span> / 03</span>
+          <button id="quoteNext" aria-label="Next quote"><svg class="icon"><use href="#i-arrow"/></svg></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FINAL CTA ===================== -->
+    <section class="cta" id="contact">
+      <figure class="cta__bg parallax-img">
+        <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=2400&q=85" alt="City skyline at blue hour" loading="lazy" />
+      </figure>
+      <div class="cta__shade"></div>
+      <div class="cta__content">
+        <p class="eyebrow eyebrow--light reveal">Start the Conversation</p>
+        <h2 class="display reveal-lines">
+          <span class="line"><span class="line__inner">Let's build something</span></span>
+          <span class="line"><span class="line__inner"><i>extraordinary.</i></span></span>
+        </h2>
+        <p class="cta__sub reveal">Have a project in mind? Let's turn the vision into something real.</p>
+        <a class="btn btn--circle" href="mailto:hello@meridiangroup.com" data-magnetic>
+          <span>Start a project</span>
+          <svg class="icon"><use href="#i-arrow"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <a class="nav__logo" href="#top">MERIDIAN<span></span></a>
+            <p>A global construction and architectural development firm building landmarks that endure — from concept to concrete since 1999.</p>
+            <div class="footer__social">
+              <a href="#" aria-label="Instagram">Instagram</a>
+              <a href="#" aria-label="LinkedIn">LinkedIn</a>
+            </div>
+          </div>
+          <nav class="footer__col" aria-label="Footer">
+            <h4>Company</h4>
+            <a href="#projects">Projects</a>
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="#process">Process</a>
+            <a href="#contact">Contact</a>
+          </nav>
+          <div class="footer__col">
+            <h4>Contact</h4>
+            <a href="mailto:hello@meridiangroup.com">hello@meridiangroup.com</a>
+            <a href="tel:+12125550148">+1 (212) 555-0148</a>
+            <p>425 Park Avenue, Suite 3800<br />New York, NY 10022</p>
+          </div>
+          <div class="footer__col footer__col--offices">
+            <h4>Offices</h4>
+            <p>New York · Dubai · London<br />Singapore · Copenhagen</p>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <span>© 2026 Meridian Development Group. All rights reserved.</span>
+          <a href="#top" class="footer__top">Back to top <svg class="icon icon--up"><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
