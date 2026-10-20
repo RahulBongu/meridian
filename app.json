@@ -1,0 +1,91 @@
+{
+  "expo": {
+    "name": "My Calories",
+    "slug": "my-calories",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "mycalories",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+
+    "ios": {
+      "icon": "./assets/images/icon.png",
+      "supportsTablet": true,
+      "bundleIdentifier": "com.mycalories.app",
+      "buildNumber": "1"
+    },
+
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#FAF7F0",
+        "foregroundImage": "./assets/images/android-icon-foreground.png",
+        "backgroundImage": "./assets/images/android-icon-background.png",
+        "monochromeImage": "./assets/images/android-icon-monochrome.png"
+      },
+      "package": "com.mycalories.app",
+      "versionCode": 10000
+    },
+
+    "web": {
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+
+    "plugins": [
+      "expo-router",
+
+      [
+        "@react-native-google-signin/google-signin",
+        {
+          "webClientId": "244984479187-81lq4pdq26rqjto4i2n4pblh73agi1qc.apps.googleusercontent.com",
+          "iosUrlScheme": "com.googleusercontent.apps.244984479187-81lq4pdq26rqjto4i2n4pblh73agi1qc"
+        }
+      ],
+
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#FFDCE6",
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 400,
+          "resizeMode": "contain"
+        }
+      ],
+
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "My Calories needs camera access to scan food and barcodes."
+        }
+      ],
+
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "My Calories needs access to your photos to scan food from your gallery.",
+          "cameraPermission": "My Calories needs camera access to scan food from your gallery."
+        }
+      ],
+
+      "expo-sharing",
+
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/images/icon.png",
+          "color": "#00C853"
+        }
+      ],
+
+      "@react-native-voice/voice",
+      "expo-audio",
+      "expo-web-browser"
+    ],
+
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    }
+  }
+}
